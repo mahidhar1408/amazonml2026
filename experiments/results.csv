@@ -1,0 +1,7 @@
+experiment,model,hyperparameters,threshold,macro_f05,precision,recall,singleton_acc,non_singleton_f05,runtime_sec
+Model1_LogisticRegression,LogisticRegression,"class_weight=balanced,max_iter=500","s2=0.99,s3=0.99",0.6435,0.7431,0.7013,0.2867,0.6646,6.2
+Model2_RandomForest,RandomForestClassifier,"n_est=100,max_depth=12","s2=0.99,s3=0.99",0.6441,0.7409,0.6967,0.2766,0.6658,17.6
+Model3_LightGBM,LGBMClassifier,"n_est=400,lr=0.05,num_leaves=63","s2=0.99,s3=0.99",0.6146,0.6669,0.7228,0.1673,0.6410,24.2
+Model4_LightGBM_Rules,LGBMClassifier,"hn_filter+addr_guard,tau=0.99",0.99,0.6876,0.7830,0.6898,0.5323,0.6968,24.2
+Model5_RandomForest_Rules,RandomForestClassifier,"hn_filter+addr_guard,tau=0.98",0.98,0.7061,0.8370,0.6743,0.6183,0.7113,17.6
+Model6_Ensemble_Rules,Ensemble_RF_LGBM,"0.7*RF+0.3*LGBM,hn_filter+addr_guard,tau=0.985",0.985,0.7069,0.8354,0.6749,0.6123,0.7125,41.8
